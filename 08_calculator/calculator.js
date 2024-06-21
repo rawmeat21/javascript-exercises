@@ -1,27 +1,33 @@
-const add = function() {
-	
+const add = (x,y)=>x+y;
+
+const subtract = (x,y)=>x-y;
+
+const sum = function(elements) {
+  let sum=0;
+
+  for(num of elements) sum+=num;
+
+  return sum;
 };
 
-const subtract = function() {
-	
+const multiply = function(elements) {
+  let prod=1;
+  for(num of elements) prod*=num;
+  return prod;
 };
 
-const sum = function() {
-	
+const power = function(base, exp) {
+  if(!exp || base==1) return 1;
+
+  if(exp>1)return base*power(base,exp-1)
+  else return base;
 };
 
-const multiply = function() {
+const factorial = function(num) {
 
+	if(num>1) return num*factorial(num-1);
+  else return num || 1;
 };
-
-const power = function() {
-	
-};
-
-const factorial = function() {
-	
-};
-
 // Do not edit below this line
 module.exports = {
   add,
